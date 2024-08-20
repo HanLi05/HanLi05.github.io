@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="nav-header">
+        <div class="logo"><a href="index.html">Han Li</a></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="skills-content">
+        <div class="skills-container">
+            <div class="button-panel">
+                <button class="panel-button" onclick="showTable('languages-table', 'languages-container')">Languages</button>
+                <button class="panel-button" onclick="showTable('software-table', 'software-container')">Software</button>
+            </div>
+        </div>
+        
+        <div class="skills-container" id="languages-container">
+            
+            <div class="table-section" id="languages-table">
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th style="width: 20%;">Language</th>
+                            <th style="width: 20%;">Proficiency</th>
+                            <th style="width: 60%;">Learned From</th>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>Working Knowledge</td>
+                            <td>CS 180: Programming I</td>
+                        </tr>
+                        <tr>
+                            <td>Python, Pandas, NumPy</td>
+                            <td>Working Knowledge</td>
+                            <td>CS 176: Data Engineering in Python, TDM 101</td>
+                        </tr>
+                        <tr>
+                            <td>R</td>
+                            <td>Proficient</td>
+                            <td>STAT 350: Introduction to Statistics, TDM 102</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>In Progress</td>
+                            <td>CS 240: Programming in C</td>
+                        </tr>
+                        <tr>
+                            <td>HTML, CSS</td>
+                            <td>Working Knowledge</td>
+                            <td>This Website!</td>
+                        </tr>
+                        <tr>
+                            <td>Javascript</td>
+                            <td>Proficient</td>
+                            <td>Community Service Club Automation Tasks</td>
+                        </tr>
+                        <tr>
+                            <td>C#</td>
+                            <td>Proficient</td>
+                            <td>CS 240: Programming in C</td>
+                        </tr>
+                        <tr>
+                            <td>SQL</td>
+                            <td>Proficient</td>
+                            <td>CS 176: Data Engineering in Python</td>
+                        </tr>
+                        <tr>
+                            <td>Dart</td>
+                            <td>Working Knowledge</td>
+                            <td>Launchpad Project - Group Glimpse</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            </div>
+            <div class="skills-container" id="software-container" style="display:none;">
+
+            <div class="table-section" id="software-table" style="display:none;">
+                <div class="table-wrapper">
+                    <table>
+                        <tr>
+                            <th style="width: 40%;">Software</th>
+                            <th style="width: 60%;">Used In</th>
+                        </tr>
+                        <tr>
+                            <td>Android Studio</td>
+                            <td>Launchpad Project - Group Glimpse</td>
+                        </tr>
+                        <tr>
+                            <td>Firebase</td>
+                            <td>Launchpad Project - Group Glimpse</td>
+                        </tr>
+                        <tr>
+                            <td>Flutter</td>
+                            <td>Launchpad Project - Group Glimpse</td>
+                        </tr>
+                        <tr>
+                            <td>IntelliJ</td>
+                            <td>CS 180: Programming I</td>
+                        </tr>
+                        <tr>
+                            <td>Visual Studio Code</td>
+                            <td>This Website!</td>
+                        </tr>
+                        <tr>
+                            <td>Vi(m)</td>
+                            <td>CS 240: Programming in C</td>
+                        </tr>
+                        <tr>
+                            <td>Linux</td>
+                            <td>Personal Hobby</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+
+    <script>
+        function showTable(tableId, containerId) {
+        // Hide both tables first
+        document.getElementById('languages-table').style.display = 'none';
+        document.getElementById('software-table').style.display = 'none';
+        document.getElementById('languages-container').style.display = 'none';
+        document.getElementById('software-container').style.display = 'none';
+    
+        // Show the selected table
+        document.getElementById(tableId).style.display = 'block';
+        document.getElementById(containerId).style.display = 'block';
+    }
+    </script>
+</body>
+</html>
+
+
