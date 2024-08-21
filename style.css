@@ -83,7 +83,7 @@ a:hover {
     justify-content: center;
     padding: 20px;
     width: 75%;
-    margin: 120px auto 0;
+    margin: 100px auto 0;
     background: rgb(71, 71, 71);
     border-radius: 8px;
     color: white;
@@ -132,15 +132,17 @@ a:hover {
 
 /* CONTENT SECTION */
 .profile-content {
-    padding-top: 60px; /* Add top padding to prevent content from hiding behind the navbar */
+    padding-top: 60px; 
 }
 
 .skills-content {
-    margin: 140px auto; /* Add top padding to prevent content from hiding behind the navbar */
+    padding-top: 80px;
+    margin: 60px auto; 
 }
 
-.projects-content {
-    margin: 140px auto;
+project-content {
+    padding-top: 1000px;
+    margin: 60px auto;
 }
 
 .skills-container {
@@ -156,6 +158,19 @@ a:hover {
     color: white;
 }
 
+/* Slideshow container */
+.slideshow-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 75%;
+    margin: 160px auto; 
+    background: rgb(71, 71, 71);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 60px;
+}
 
 /* Table styles */
 .table-section {
@@ -195,17 +210,6 @@ td {
     margin: 0 auto; /* Center the grid */
 }
 
-/* Each project container */
-.project-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgb(71, 71, 71);
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-}
-
 /* Image styling */
 .project-image img {
     width: 100%;
@@ -240,16 +244,7 @@ td {
 
 
 
-/* Slideshow container */
-.slideshow-container {
-    position: relative;
-    max-width: 75%;
-    margin: 140px auto; /* Center the slideshow with padding from the navbar */
-    background: rgb(71, 71, 71);
-    padding: 20px;
-    border-radius: 8px;
-    color: white;
-}
+
 
 /* Hide all slides by default */
 .mySlides {
@@ -361,15 +356,15 @@ td {
 
 
 .group-glimpse-image {
-    width: 40%; /* Adjust width as needed */
+    width: 40%; 
 }
 
 .cs180-image {
-    width: 40%; /* Adjust width as needed */
+    width: 40%; 
 }
 
 .fruitybot-image {
-    width: 55%; /* Adjust width as needed */
+    width: 55%; 
 }
 
 .nbamvp-image {
@@ -387,8 +382,8 @@ td {
     align-items: center;
     gap: 20px;
     padding: 20px;
-    width: 75%; /* Set the container width to 75% */
-    margin: 160px auto 0; /* Center the container horizontally */
+    width: 75%; 
+    margin: 160px auto 0; 
     background: rgb(71, 71, 71);
     color: white;
 }
