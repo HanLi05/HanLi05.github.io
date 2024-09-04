@@ -161,14 +161,16 @@ a:hover {
 }
 
 .skills-content {
-    padding-top: 80px;
     margin: 60px auto; 
 }
 
-project-content {
-    padding-top: 1000px;
+.project-content {
     margin: 60px auto;
 }
+
+/* contact-content {
+    margin: 60px;
+} */
 
 .skills-container {
     display: flex;
@@ -189,13 +191,11 @@ project-content {
     align-items: center;
     position: relative;
     max-width: 75%;
-    margin: 160px auto; 
+    margin: 2% auto; 
     background: rgb(71, 71, 71);
     padding: 20px;
     border-radius: 8px;
-    color: white;
-    margin-bottom: 60px;
-}
+    color: white;}
 
 /* Table styles */
 .table-section {
@@ -226,6 +226,8 @@ th {
 td {
     background-color: rgb(71, 71, 71);
 }
+
+
 
 .projects-grid {
     display: grid;
@@ -278,7 +280,7 @@ td {
 
 .slide {
     width: 100%;
-    height: 700px; /* Set a constant height */
+    height: 120%; /* Set a constant height */
     display: flex;
     align-items: center; /* Center the content vertically */
     justify-content: center; /* Center the content horizontally */
@@ -321,9 +323,8 @@ td {
 .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 50%;
     width: auto;
-    margin-top: -22px;
+    transform:translateY(-50%);
     padding: 16px;
     color: white;
     font-weight: bold;
