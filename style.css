@@ -27,12 +27,11 @@ a {
 }
 
 /* DESKTOP NAV */
-nav {
+nav#nav-header {
   display: flex;
   justify-content: space-between; /* Align logo left and nav links right */
   align-items: center;
-  height: 100px; /* Adjusted height for fixed navbar */
-  padding: 0 20px; /* Add padding for spacing */
+  height: 15%; /* Adjusted height for fixed navbar */
   background: black; /* Ensure navbar background matches body */
   border-bottom: 1px solid white; /* Add a line underneath the navbar */
   position: fixed; /* Fix the navbar at the top */
@@ -40,6 +39,12 @@ nav {
   width: calc(100% - 40px); /* Adjust width to account for body padding */
   z-index: 1000; /* Ensure it stays on top */
 }
+
+body {
+    background: black;
+    color: white;
+    padding: 100px 20px 0px 20px; /* Adjusted padding to prevent navbar overlap */
+  }
 
 .nav-links {
   display: flex;
@@ -83,7 +88,7 @@ a:hover {
     justify-content: center;
     padding: 20px;
     width: 75%;
-    margin: 100px auto 0;
+    margin: 0 auto 0;
     background: rgb(71, 71, 71);
     border-radius: 8px;
     color: white;
@@ -103,6 +108,26 @@ a:hover {
 
 .profile-text {
     flex: 2; 
+    text-align: left;
+    width: 100%;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add space between image and text */
+    }
+
+    .profile-text {
+        text-align: left; /* Ensure text remains aligned to the left */
+        margin-right: 0; /* Remove right margin */
+    }
 }
 
 /* Button panel */
@@ -372,39 +397,44 @@ td {
 }
 
 
-
-
-
 /* Contact boxes container */
 .contact-boxes-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+    align-items: flex-start;
+    gap: 2%;
+    padding: 2%;
     width: 75%; 
-    margin: 160px auto 0; 
+    margin: 60px auto 0; 
     background: rgb(71, 71, 71);
+    border-radius: 8px;
     color: white;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
+/* Contact box */
 .contact-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px;
-    height: 200px;
+    width: 22%; /* Slightly reduce to allow for more margin on small screens */
+    height: 35vh;
     background-color: grey;
     color: white;
     border-radius: 8px;
     text-decoration: none;
     transition: background-color 300ms ease;
+    max-width: 200px; /* Prevents the box from shrinking too much */
+    min-width: 120px; /* Ensures the boxes have a minimum size */
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+    margin-bottom: 2%; /* Add margin to prevent the icons from moving up */
 }
 
 .contact-box img {
-    width: 125px;
-    height: 125px;
+    width: 60%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 60%;
 }
 
 .contact-box:hover {
@@ -414,4 +444,30 @@ td {
 .contact-box span {
     font-size: 1rem;
     margin-top: 10px;
+    text-align: center;
+    word-wrap: break-word;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-box {
+        width: 45%; /* Allow two boxes per row */
+        height: 30vh; /* Adjust height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-box {
+        width: 90%; /* Single column layout on very small screens */
+        height: 25vh;
+    }
+
+    .contact-box img {
+        width: 50%; /* Reduce image size on small screens */
+    }
+
+    .contact-box span {
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+}
+
